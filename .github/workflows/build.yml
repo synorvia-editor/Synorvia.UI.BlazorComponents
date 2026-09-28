@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      PROJECT_NAME: MDD4All.UI.BlazorComponents
+      PROJECT_NAME: Synorvia.UI.BlazorComponents
 
     steps:
     - name: Checkout source code

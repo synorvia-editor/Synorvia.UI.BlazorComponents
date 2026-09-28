@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>Synorvia.UI.BlazorComponents</AssemblyName>
+        <RootNamespace>Synorvia.UI.BlazorComponents</RootNamespace>
+        <!-- oalt's, as in his package project; the app is built from this file. -->
+        <Authors>Dr. Oliver Alt</Authors>
+        <Company>MDD4All.de</Company>
+        <Copyright>(c) MDD4All.de</Copyright>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\MDD4All.Localization\src\MDD4All.Localization\MDD4All.Localization-dev.csproj" />
+      <ProjectReference Include="..\..\..\Synorvia.UI.DataModels\src\Synorvia.UI.DataModels\Synorvia.UI.DataModels-dev.csproj" />
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+      <Compile Update="Resources\Dialog\ModalDialog.de.Designer.cs">
+        <DependentUpon>ModalDialog.de.resx</DependentUpon>
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+      </Compile>
+      <Compile Update="Resources\Dialog\ModalDialog.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ModalDialog.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\ErrorList\ErrorListPanel.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ErrorListPanel.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Dialog\ModalDialog.de.resx">
+        <LastGenOutput>ModalDialog.de.Designer.cs</LastGenOutput>
+        <Generator>ResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Dialog\ModalDialog.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ModalDialog.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\ErrorList\ErrorListPanel.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ErrorListPanel.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
