@@ -4,17 +4,27 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <!-- Forked from oalt's MDD4All.UI.BlazorComponents and renamed, so the two never meet in one build. Author and copyright stay his. -->
+  </PropertyGroup>
+
+  <!-- Forked from oalt's MDD4All.UI.BlazorComponents and renamed, so the two never meet in one build.
+       His values stay as they were; mDuckLab follows for the parts added here. -->
+  <PropertyGroup>
     <Version>2.0.0.0</Version>
-    <Authors>Dr. Oliver Alt</Authors>
+    <Authors>Dr. Oliver Alt, mDuckLab</Authors>
     <Company>MDD4All.de</Company>
     <Description>A collection of Blazor user interface components</Description>
-    <Copyright>(c) MDD4All.de</Copyright>
+    <Copyright>(c) MDD4All.de, (c) 2026 mDuckLab</Copyright>
     <PackageReadmeFile>Nuget.md</PackageReadmeFile>
     <PackageTags>Blazor UI Components</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -24,9 +34,15 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-  <!-- Waiting on a package: Synorvia.UI.DataModels is not published yet. -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Synorvia.UI.DataModels\src\Synorvia.UI.DataModels\Synorvia.UI.DataModels-dev.csproj" />
+    <PackageReference Include="Synorvia.UI.DataModels" Version="2.0.0.3" />
+    <PackageReference Include="MDD4All.Localization" Version="2.0.0.1" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <!-- A development file of this project, not something a consumer should receive. -->
+  <ItemGroup>
+    <Content Update="Properties\launchSettings.json" Pack="false" />
   </ItemGroup>
 
   <ItemGroup>

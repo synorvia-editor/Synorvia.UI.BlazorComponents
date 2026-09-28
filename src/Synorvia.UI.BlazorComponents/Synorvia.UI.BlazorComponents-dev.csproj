@@ -6,10 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <AssemblyName>Synorvia.UI.BlazorComponents</AssemblyName>
         <RootNamespace>Synorvia.UI.BlazorComponents</RootNamespace>
-        <!-- oalt's, as in his package project; the app is built from this file. -->
-        <Authors>Dr. Oliver Alt</Authors>
+        <!-- As in the package project; the app is built from this file. -->
+        <Authors>Dr. Oliver Alt, mDuckLab</Authors>
         <Company>MDD4All.de</Company>
-        <Copyright>(c) MDD4All.de</Copyright>
+        <Copyright>(c) MDD4All.de, (c) 2026 mDuckLab</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
